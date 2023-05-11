@@ -16,6 +16,10 @@
 		E3051F072A0C765700516147 /* StudentNoteAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3051F062A0C765700516147 /* StudentNoteAppTests.swift */; };
 		E3051F112A0C765700516147 /* StudentNoteAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3051F102A0C765700516147 /* StudentNoteAppUITests.swift */; };
 		E3051F132A0C765700516147 /* StudentNoteAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3051F122A0C765700516147 /* StudentNoteAppUITestsLaunchTests.swift */; };
+		E3051F202A0C782600516147 /* noteCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3051F1F2A0C782600516147 /* noteCellTableViewCell.swift */; };
+		E3051F222A0C87EA00516147 /* addNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3051F212A0C87EA00516147 /* addNoteViewController.swift */; };
+		E3051F242A0C880D00516147 /* noteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3051F232A0C880D00516147 /* noteDetailViewController.swift */; };
+		E3051F262A0C919700516147 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3051F252A0C919700516147 /* Notes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		E3051F0C2A0C765700516147 /* StudentNoteAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudentNoteAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3051F102A0C765700516147 /* StudentNoteAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentNoteAppUITests.swift; sourceTree = "<group>"; };
 		E3051F122A0C765700516147 /* StudentNoteAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentNoteAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E3051F1F2A0C782600516147 /* noteCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteCellTableViewCell.swift; sourceTree = "<group>"; };
+		E3051F212A0C87EA00516147 /* addNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNoteViewController.swift; sourceTree = "<group>"; };
+		E3051F232A0C880D00516147 /* noteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteDetailViewController.swift; sourceTree = "<group>"; };
+		E3051F252A0C919700516147 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +109,12 @@
 			children = (
 				E3051EEF2A0C765500516147 /* AppDelegate.swift */,
 				E3051EF12A0C765500516147 /* SceneDelegate.swift */,
-				E3051EF32A0C765500516147 /* ViewController.swift */,
 				E3051EF52A0C765500516147 /* Main.storyboard */,
+				E3051EF32A0C765500516147 /* ViewController.swift */,
+				E3051F252A0C919700516147 /* Notes.swift */,
+				E3051F212A0C87EA00516147 /* addNoteViewController.swift */,
+				E3051F232A0C880D00516147 /* noteDetailViewController.swift */,
+				E3051F1F2A0C782600516147 /* noteCellTableViewCell.swift */,
 				E3051EF82A0C765600516147 /* Assets.xcassets */,
 				E3051EFA2A0C765600516147 /* LaunchScreen.storyboard */,
 				E3051EFD2A0C765600516147 /* Info.plist */,
@@ -259,8 +271,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3051EF42A0C765500516147 /* ViewController.swift in Sources */,
+				E3051F262A0C919700516147 /* Notes.swift in Sources */,
+				E3051F242A0C880D00516147 /* noteDetailViewController.swift in Sources */,
 				E3051EF02A0C765500516147 /* AppDelegate.swift in Sources */,
 				E3051EF22A0C765500516147 /* SceneDelegate.swift in Sources */,
+				E3051F202A0C782600516147 /* noteCellTableViewCell.swift in Sources */,
+				E3051F222A0C87EA00516147 /* addNoteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
