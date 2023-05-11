@@ -10,21 +10,47 @@ import UIKit
 class addNoteViewController: UIViewController {
 
     @IBOutlet weak var textFieldClassName: UITextField!
-    
-    
     @IBOutlet weak var textFieldNote1: UITextField!
-    
     @IBOutlet weak var textFieldNote2: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func noteAdd(_ sender: Any) {
-        print("ekle")
+        if let ad = textFieldClassName.text,let note1 = textFieldNote1.text,let note2 = textFieldNote2.text {
+            
+            if let n1 = Int(note1),let n2 = Int(note2) {
+               
+                noteAdd(class_name: ad, note1: n1, note2: n2)
+            }
+            
+        }
     }
     
     
+    func noteAdd(class_name:String,note1:Int,note2:Int){
+        
+        var request = URLRequest(url: URL(string: "http://kasimadalan.pe.hu/notlar/insert_not.php")!)
+        request.httpMethod = "POST"
+        let postString = "class_name=\(class_name)&note1=\(note1)&note2=\(note2)"
+        request.httpBody = postString.data(using: .utf8)
+        
+        URLSession.shared.dataTask(with: request) { data,response,error in
+            if error != nil || data == nil {
+                print("Error")
+                return
+            }
+            
+            do{
+                if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String:Any]{
+                    print(json)
+                }
 
+            }catch{
+                print(error.localizedDescription)
+            }
+        }.resume()
+    }
 }

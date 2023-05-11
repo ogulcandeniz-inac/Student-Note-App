@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Alamofire
 class ViewController: UIViewController {
 
     @IBOutlet weak var noteTableView: UITableView!
@@ -22,13 +21,62 @@ class ViewController: UIViewController {
         noteTableView.dataSource = self
        
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-          
+    override func viewWillAppear(_ animated: Bool) {
+        tumNotlarAl()
     }
     
-    
-   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toNoteDetail" {
+            let indeks = sender as? Int
+            
+            let gidilecekVC = segue.destination as! noteDetailViewController
+            
+            gidilecekVC.note = noteList[indeks!]
+            
+        }
+    }
+    func tumNotlarAl(){
+        let url = URL(string: "http://kasimadalan.pe.hu/notlar/tum_notlar.php")!
+        
+        URLSession.shared.dataTask(with: url) { data,response,error in
+            if error != nil || data == nil {
+                print("Hata")
+                return
+            }
+            
+            do{
+                let cevap = try JSONDecoder().decode(NotesReply.self, from: data!)
+                
+                if let gelenNotListesi = cevap.notes {
+                    self.noteList = gelenNotListesi
+                }else{
+                    self.noteList = [Notes]()
+                }
+                
+                DispatchQueue.main.async {
+                    
+                    var toplam = 0
+                    for n in self.noteList {
+                        
+                        if let n1 = Int(n.note1!),let n2 = Int(n.note2!) {
+                             toplam = toplam + (n1+n2)/2
+                        }
+                       
+                    }
+                    
+                    if self.noteList.count != 0 {
+                        self.navigationItem.prompt = "Ortalama : \(toplam / self.noteList.count)"
+                    }else{
+                        self.navigationItem.prompt = "Ortalama : YOK"
+                    }
+                    
+                    self.noteTableView.reloadData()
+                }
+            }catch{
+                print(error.localizedDescription)
+            }
+        }.resume()
+    }
     
     
     
