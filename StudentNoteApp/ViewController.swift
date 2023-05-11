@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Alamofire
 class ViewController: UIViewController {
 
     @IBOutlet weak var noteTableView: UITableView!
@@ -16,17 +16,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let n1 = Notes(note_id: 1, class_name: "Tarih", note1: 30, note2: 50)
-        let n2 = Notes(note_id: 2, class_name: "Fizik", note1: 50, note2: 20)
         
-        
-        noteList.append(n1)
-        noteList.append(n2)
         
         noteTableView.delegate = self
         noteTableView.dataSource = self
        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+          
+    }
+    
+    
+   
+    
+    
+    
+    
 }
 
 extension ViewController: UITableViewDataSource,UITableViewDelegate {
@@ -43,5 +49,9 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate {
         cell.labelNote1.text = String(note.note1!)
         cell.labelNote2.text = String(note.note2!)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "toNoteDetail", sender: indexPath.row)
     }
 }

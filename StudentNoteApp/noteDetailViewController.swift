@@ -23,8 +23,10 @@ class noteDetailViewController: UIViewController {
     
 
     @IBAction func noteClear(_ sender: Any) {
+        print("sil")
     }
     
     @IBAction func noteUpdate(_ sender: Any) {
+        print("güncelle")
     }
 }

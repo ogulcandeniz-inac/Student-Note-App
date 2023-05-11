@@ -7,13 +7,13 @@
 
 import Foundation
 
-class Notes {
-    var note_id:Int?
+class Notes:Codable {
+    var note_id:String?
     var class_name:String?
-    var note1:Int?
-    var note2:Int?
+    var note1:String?
+    var note2:String?
     
-    init(note_id: Int?, class_name: String?, note1: Int?, note2: Int?) {
+    init(note_id: String?, class_name: String?, note1: String?, note2: String?) {
         self.note_id = note_id
         self.class_name = class_name
         self.note1 = note1

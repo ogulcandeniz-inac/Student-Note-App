@@ -22,6 +22,7 @@ class addNoteViewController: UIViewController {
     }
     
     @IBAction func noteAdd(_ sender: Any) {
+        print("ekle")
     }
     
     

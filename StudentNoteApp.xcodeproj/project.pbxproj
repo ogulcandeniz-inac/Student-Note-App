@@ -20,6 +20,8 @@
 		E3051F222A0C87EA00516147 /* addNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3051F212A0C87EA00516147 /* addNoteViewController.swift */; };
 		E3051F242A0C880D00516147 /* noteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3051F232A0C880D00516147 /* noteDetailViewController.swift */; };
 		E3051F262A0C919700516147 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3051F252A0C919700516147 /* Notes.swift */; };
+		E3051F282A0CBB5900516147 /* NotesReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3051F272A0CBB5900516147 /* NotesReply.swift */; };
+		E3051F2B2A0CBD8200516147 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E3051F2A2A0CBD8200516147 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,7 @@
 		E3051F212A0C87EA00516147 /* addNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNoteViewController.swift; sourceTree = "<group>"; };
 		E3051F232A0C880D00516147 /* noteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteDetailViewController.swift; sourceTree = "<group>"; };
 		E3051F252A0C919700516147 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		E3051F272A0CBB5900516147 /* NotesReply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesReply.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3051F2B2A0CBD8200516147 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +116,7 @@
 				E3051EF52A0C765500516147 /* Main.storyboard */,
 				E3051EF32A0C765500516147 /* ViewController.swift */,
 				E3051F252A0C919700516147 /* Notes.swift */,
+				E3051F272A0CBB5900516147 /* NotesReply.swift */,
 				E3051F212A0C87EA00516147 /* addNoteViewController.swift */,
 				E3051F232A0C880D00516147 /* noteDetailViewController.swift */,
 				E3051F1F2A0C782600516147 /* noteCellTableViewCell.swift */,
@@ -155,6 +160,9 @@
 			dependencies = (
 			);
 			name = StudentNoteApp;
+			packageProductDependencies = (
+				E3051F2A2A0CBD8200516147 /* Alamofire */,
+			);
 			productName = StudentNoteApp;
 			productReference = E3051EEC2A0C765500516147 /* StudentNoteApp.app */;
 			productType = "com.apple.product-type.application";
@@ -227,6 +235,9 @@
 				Base,
 			);
 			mainGroup = E3051EE32A0C765500516147;
+			packageReferences = (
+				E3051F292A0CBD8200516147 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = E3051EED2A0C765500516147 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -270,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3051F282A0CBB5900516147 /* NotesReply.swift in Sources */,
 				E3051EF42A0C765500516147 /* ViewController.swift in Sources */,
 				E3051F262A0C919700516147 /* Notes.swift in Sources */,
 				E3051F242A0C880D00516147 /* noteDetailViewController.swift in Sources */,
@@ -612,6 +624,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E3051F292A0CBD8200516147 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E3051F2A2A0CBD8200516147 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E3051F292A0CBD8200516147 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E3051EE42A0C765500516147 /* Project object */;
 }
