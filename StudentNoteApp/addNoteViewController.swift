@@ -6,28 +6,34 @@
 //
 
 import UIKit
+protocol AddNoteDelegate: AnyObject {
+    func didAddNoteWithClassName(_ className: String, note1: Int, note2: Int)
+}
 
 class addNoteViewController: UIViewController {
 
     @IBOutlet weak var textFieldClassName: UITextField!
     @IBOutlet weak var textFieldNote1: UITextField!
     @IBOutlet weak var textFieldNote2: UITextField!
-    
+    weak var delegate: AddNoteDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
     @IBAction func noteAdd(_ sender: Any) {
-        if let ad = textFieldClassName.text,let note1 = textFieldNote1.text,let note2 = textFieldNote2.text {
-            
-            if let n1 = Int(note1),let n2 = Int(note2) {
-               
-                noteAdd(class_name: ad, note1: n1, note2: n2)
+            if let ad = textFieldClassName.text, let note1 = textFieldNote1.text, let note2 = textFieldNote2.text {
+                
+                if let n1 = Int(note1), let n2 = Int(note2) {
+                    delegate?.didAddNoteWithClassName(ad, note1: n1, note2: n2)
+                }
+                
             }
-            
+            dismiss(animated: true, completion: nil)
+        
+        
+        
         }
-    }
     
     
     func noteAdd(class_name:String,note1:Int,note2:Int){

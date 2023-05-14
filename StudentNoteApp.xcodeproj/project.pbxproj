@@ -21,7 +21,6 @@
 		E3051F242A0C880D00516147 /* noteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3051F232A0C880D00516147 /* noteDetailViewController.swift */; };
 		E3051F262A0C919700516147 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3051F252A0C919700516147 /* Notes.swift */; };
 		E3051F282A0CBB5900516147 /* NotesReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3051F272A0CBB5900516147 /* NotesReply.swift */; };
-		E3051F2B2A0CBD8200516147 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E3051F2A2A0CBD8200516147 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3051F2B2A0CBD8200516147 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,7 +159,6 @@
 			);
 			name = StudentNoteApp;
 			packageProductDependencies = (
-				E3051F2A2A0CBD8200516147 /* Alamofire */,
 			);
 			productName = StudentNoteApp;
 			productReference = E3051EEC2A0C765500516147 /* StudentNoteApp.app */;
@@ -472,6 +469,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -499,6 +497,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -635,14 +634,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		E3051F2A2A0CBD8200516147 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E3051F292A0CBD8200516147 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E3051EE42A0C765500516147 /* Project object */;
 }
